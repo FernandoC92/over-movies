@@ -1,8 +1,8 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import HeaderStyle from '../Header/Header.component.scss'
-import magnifyingGlass from '../../../assets/icons/search.svg'
-import plus from '../../../assets/icons/plus.svg'
+import magnifyingGlass from '../../assets/icons/search.svg'
+import plus from '../../assets/icons/plus.svg'
 
 function Header() {
     return (
