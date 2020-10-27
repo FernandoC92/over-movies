@@ -1,10 +1,10 @@
 import React from 'react';
-import CardMovie from '../../assets/GridItem.png';
+// import CardMovie from '../../assets/GridItem.png';
 
-function MovieCard() {
+function MovieCard(props) {
     return (
         <div>
-            <img src={CardMovie} width="250" height="140" class="img-fluid" alt="Movie Card"></img>
+            <img src={`https://image.tmdb.org/t/p/w500/${props.logoPath}`} width="250" height="140" className="img-fluid" alt="Movie Card"></img>
         </div>
     )
 }

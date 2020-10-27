@@ -1,0 +1,18 @@
+.color-title {
+    color: #FFFFFF;
+}
+
+.bg-default {
+    background-color: #182131;
+}
+
+.input-default {
+    color           : #959AA1;
+    background-color: #2B3442;
+    font-size       : 1rem;
+
+    &:focus {
+        background-color: #2B3442;
+        color           : #fdfeff;
+    }
+}

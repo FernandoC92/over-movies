@@ -1,0 +1,19 @@
+.add-title {
+    font-size: 58px;
+}
+
+.text-content {
+    font-size: 25px;
+    width: 85%;
+}
+
+@media(max-width: 1366px) {
+    .add-title {
+        font-size: 42px;
+    }
+    
+    .text-content {
+        font-size: 18px;
+        width: 85%;
+    }
+}

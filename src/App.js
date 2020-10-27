@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import './App.scss';
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Header from "./components/Header/Header.component";
 import MainHall from "./components/MainHall/MainHall.component"
+import CreateMovie from './components/CreateMovie/CreateMovie.component';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-              {/* <Link to="/hall">Hall link</Link> */}
         <Switch>
           <Route path="/" exact component={MainHall} />
+          <Route path="/createmovie" component={CreateMovie}/>
         </Switch>
       </div>
     </Router>
