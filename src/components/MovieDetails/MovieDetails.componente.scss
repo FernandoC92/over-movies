@@ -1,0 +1,36 @@
+.font-gray {
+    color: #EEEEEE;
+}
+
+.movie-name {
+    font-size: 48px;
+}
+
+.sub {
+    font-size: 34px;
+}
+
+.content {
+    font-size: 25px;
+}
+
+.w-85 {
+    max-width: 90%;
+}
+
+@media(max-width: 1366px) {
+    .movie-name {
+        font-size: 38px;
+    }
+    
+    .sub {
+        font-size: 24px;
+    }
+    
+    .content {
+        font-size: 18px;
+    }
+    .w-85 {
+        max-width: 100%;
+    }
+}

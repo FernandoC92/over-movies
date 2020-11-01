@@ -4,3 +4,24 @@
 .label-size {
     font-size: 18px;
 }
+
+.bg-terms {
+    background-color: #182131;
+}
+
+.btn-submit {
+    border: 2px solid #FFBB00;
+    background-color: #182131;
+    color: #FFBB00;
+    width: 260px;
+    height: 70px;
+    &:hover {
+        color: #FFF;
+        border-color: #FFF;
+    }
+}
+
+.input-search-image :focus {
+    height: 100vh !important;
+    height: 100%;
+}

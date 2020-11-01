@@ -4,7 +4,7 @@ import React from 'react';
 function MovieCard(props) {
     return (
         <div>
-            <img src={`https://image.tmdb.org/t/p/w500/${props.logoPath}`} width="250" height="140" className="img-fluid" alt="Movie Card"></img>
+            <img src={`https://image.tmdb.org/t/p/w500/${props.logoPath}`} width="250" height="376" alt="Movie Card"></img>
         </div>
     )
 }

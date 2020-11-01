@@ -1,37 +1,53 @@
 import React, { useState } from 'react';
 import MovieCard from '../MovieCard/MovieCard.component';
+import './Photos&Videos.component.scss';
 import axios from 'axios';
 
 function PhotosAndVideos() {
     const apiUrl = 'https://api.themoviedb.org/3/search/movie?api_key=871af326ea42ac846f6291a42c4ab279&query=';
-    let nameMovie = 'avengers';
     const [movies, setMovies] = useState([]);
-    console.log('movies', movies)
 
-    axios.get(`${apiUrl}${nameMovie}`)
-    .then( response => {
-        setMovies(response.data.results);
-    })
-    .catch(error => console.error(error))
+    // eslint-disable-next-line no-unused-vars
+    // let memoMovies = useMemo(async () => getMoviesPromisse(nameMovie), [nameMovie]);
 
-    // axios.get(`${apiUrl}${nameMovie}`)
-    // .then(response => {
-    //     setMovies(response.data.results)
-    //     console.log('response.data.results', response.data.results)
-    // })
-    // .catch(error => {
-    //     console.error(error);
-    // })
+    function getMoviesPromisse(nameMovie) {
+        axios.get(`${apiUrl}${nameMovie}`)
+            .then(res => {
+                setMovies(res.data.results);
+            })
+            .catch(err => console.error(err));
+    }
+
+    function inputChange(e) {
+        if (e === '') {
+            setMovies([]);
+        } else {
+            getMoviesPromisse(e)
+        }
+
+    }
+
+
 
     return (
         <div>
             <div className="title-register-form mt-5 text-white">Fotos & Videos</div>
             <div className="form-group col-12 col-md-4 p-0 mt-4">
-                <input type="email" className="form-control input-default border-0 mb-4" placeholder="Pesquise sua imagem aqui..." aria-describedby="search images"></input>
+                <input name="inputSearchImg" className="form-control input-default border-0 mb-4 input-search-image" placeholder="Pesquise sua imagem aqui..." aria-describedby="search images"
+                    onChange={e => inputChange(e.target.value)}
+                ></input>
                 {/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
-                {   
-                   (movies > 0)  ? <MovieCard logoPath = { movies[0].poster_path } /> : <h1>Sem filmes..</h1>
-                }   
+            </div>
+            <div className="row p-0 mt-4 justify-content-center justify-content-md-start">
+                {
+                    movies.map(movie =>
+                        <div className="p-0 d-flex justify-content-center">
+                            <div className="col-12 col-md-3 col-lg-2 mt-4 px-0 pb-4 d-flex justify-content-center card-area m-0 m-md-2">
+                                < MovieCard logoPath={movie.poster_path} />
+                            </div>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )

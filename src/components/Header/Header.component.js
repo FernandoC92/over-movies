@@ -5,7 +5,12 @@ import plus from '../../assets/icons/plus.svg'
 import { Link } from "react-router-dom";
 
 
-function Header() {
+function Header(props) {
+    
+    function valueInputChange(e) {
+        props.inputSearchChange(e.target.value);
+    }
+    
     return (
         <header className="container-fluid header-custom bg-default">
             <div className="row h-100">
@@ -14,7 +19,7 @@ function Header() {
                 </div>
                 <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
                     <div className="input-group d-flex justify-content-center">
-                        <input type="text" className="form-control input-search border-0" placeholder="Find your favorite movies..." aria-label="Find your favorite movies" aria-describedby="button-addon2"></input>
+                        <input onChange={valueInputChange} type="text" className="form-control input-search border-0" placeholder="Find your favorite movies..." aria-label="Find your favorite movies" aria-describedby="button-addon2"></input>
                         <div className="input-group-append">
                             <button className="btn btn-outline-secondary btn-search border-left-0 border-0" type="button" id="button-addon2"><img className="img-fluid mr-2" src={magnifyingGlass} alt="magnifying glass"></img></button>
                         </div>
