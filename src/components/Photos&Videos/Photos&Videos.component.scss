@@ -2,3 +2,10 @@
     height: 100vh !important;
     height: 100%;
 }
+
+.btn-img {
+    transition: 0.3s;
+    &:focus {
+        transform: scale(0.9, 0.9);
+    }
+}

@@ -24,7 +24,7 @@ function MovieDetails(props) {
 
 
     return (
-        <div className="container-fluid main-hall pt-5 vh-100">
+        <div className="container-fluid main-hall pt-5 vh-custom">
             <div className="row">
                 <div className="col-12 offset-0 col-md-11 offset-md-1 mt-5">
                     <div className="row p-0">
@@ -39,7 +39,7 @@ function MovieDetails(props) {
                                 <div className="row mt-5">
                                     <div className="col-12 col-md-3">
                                         <p className="text-white content font-weight-bold mb-0">Producer</p>
-                                        <p className="font-gray content">{movie.producer}</p>
+                                        <p className="font-gray content text-truncate" style={{maxWidth: '200px'}}>{movie.producer}</p>
                                         <p className="text-white content mt-4 font-weight-bold  mb-0">Classification</p>
                                         <p className="font-gray content">{movie.classification}</p>
                                     </div>

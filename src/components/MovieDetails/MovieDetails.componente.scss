@@ -1,3 +1,11 @@
+.vh-custom {
+    height: 100vh;
+}
+
+.img-movie {
+    width: 80%;
+}
+
 .font-gray {
     color: #EEEEEE;
 }
@@ -32,5 +40,17 @@
     }
     .w-85 {
         max-width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    .vh-custom {
+        height: 100%;
+    }
+    .img-movie {
+        width: 100%;
+    }
+    .movie-name {
+        font-size: 28px;
     }
 }

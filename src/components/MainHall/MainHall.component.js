@@ -40,8 +40,8 @@ const MainHall = forwardRef((props, ref) => {
         <div className="container-fluid main-hall">
             <div className="row">
                 <div className="col-12 col-md-11 offset-0 offset-md-1 mt-5">
-                    <h1 className="color-title text-center text-md-left">Os Mais Populares</h1>
-                    <div className="row p-0 d-flex justify-content-start mt-4">
+                    <h1 className="color-title text-center text-md-left">Recently added</h1>
+                    <div className="row p-0 d-flex justify-content-center justify-content-md-start mt-4">
                         {
                             movies.map((movie, index) =>
                                 <div key={index} className="p-0 d-flex justify-content-center">

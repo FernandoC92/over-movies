@@ -6,14 +6,12 @@ import MainHall from "./components/MainHall/MainHall.component"
 import CreateMovie from './components/CreateMovie/CreateMovie.component';
 import MovieDetails from './components/MovieDetails/MovieDetails.component';
 
-function App() {
-
+function App(props) {
   const childRef = useRef();
 
   function inputSearchChange(value) {
     childRef.current.getMoviesByName(value);
   }
-
 
   return (
     <Router>

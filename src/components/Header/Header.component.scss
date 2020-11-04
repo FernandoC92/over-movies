@@ -5,6 +5,10 @@
 .app-name {
     color    : #E0E0E3;
     font-size: 2rem;
+    &:hover {
+        text-decoration: none;
+        color: #FFBB00;
+    }
 }
 
 .input-search {
